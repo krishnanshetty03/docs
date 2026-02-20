@@ -1,3 +1,5 @@
+import SpinabotLogo from '../components/SpinabotLogo'
+
 function WhatIsLindy() {
     const orangeColor = '#f59e0b'; // Amber/Orange color from reference
 
@@ -34,10 +36,13 @@ function WhatIsLindy() {
 
     return (
         <div>
-            <h1 style={{ fontSize: '3rem', marginBottom: '1rem', lineHeight: '1.2' }}>
-                Your AI Crew<br />
-                <span style={{ color: orangeColor }}>for the Businesses</span>
-            </h1>
+            <div style={{ display: 'flex', alignItems: 'center', marginBottom: '1.5rem', gap: '1rem' }}>
+                <SpinabotLogo size={96} color={orangeColor} />
+                <h1 style={{ fontSize: '3rem', margin: 0, lineHeight: '1.2' }}>
+                    Your AI Crew<br />
+                    <span style={{ color: orangeColor }}>for the Businesses</span>
+                </h1>
+            </div>
             <p style={{ fontSize: '1.1rem', marginBottom: '2rem', color: 'var(--text-secondary)' }}>
                 Build AI agents with a simple prompt. Design, Host & Scale with AI Automation.
             </p>
@@ -211,10 +216,10 @@ function WhatIsLindy() {
                         borderLeft: `4px solid ${orangeColor}`
                     }}>
                         <h3 style={{ color: orangeColor, marginTop: 0 }}>
-                           No Coding Required
+                            No Coding Required
                         </h3>
                         <p>
-                           There’s no need for developers or technical configuration. Spinabot uses natural language inputs to understand your business needs and acts on them with more than 10+ languages support.
+                            There’s no need for developers or technical configuration. Spinabot uses natural language inputs to understand your business needs and acts on them with more than 10+ languages support.
                         </p>
                     </div>
 

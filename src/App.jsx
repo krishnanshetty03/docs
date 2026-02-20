@@ -3,6 +3,7 @@ import Layout from './components/Layout'
 import WhatIsLindy from './pages/WhatIsspinabot'
 import Quickstart from './pages/Quickstart'
 import WorkflowOverview from './pages/WorkflowOverview'
+import AiCrew from './pages/AiCrew'
 import AiWorkflowGenerator from './pages/AiWorkflowGenerator'
 import CredentialsManagement from './pages/CredentialsManagement'
 import ExecutionsDashboard from './pages/ExecutionsDashboard'
@@ -12,7 +13,9 @@ import UseCases from './pages/UseCases'
 import ChatbotOverview from './pages/ChatbotOverview'
 import ProductionReadyChatbot from './pages/ProductionReadyChatbot'
 import AiAvatarVoice from './pages/AiAvatarVoice'
+import CognitiveAgentsOverview from './pages/CognitiveAgentsOverview'
 import VoiceAgentsOverview from './pages/VoiceAgentsOverview'
+import SlmOverview from './pages/SlmOverview'
 import HowToCreateVoiceAgent from './pages/HowToCreateVoiceAgent'
 import ScheduleCalls from './pages/ScheduleCalls'
 import VoiceAgentsUseCases from './pages/VoiceAgentsUseCases'
@@ -26,11 +29,14 @@ import FollowUps from './pages/FollowUps'
 import SmartScheduling from './pages/SmartScheduling'
 import DomainAgents from './pages/DomainAgents'
 import Testing from './pages/Testing'
-import AssistantsBilling from './pages/AssistantsBilling'
+import Security from './pages/Security'
+import AccountBilling from './pages/AccountBilling'
+import DeveloperOverview from './pages/DeveloperOverview'
+import DeveloperApis from './pages/DeveloperApis'
+import Integrations from './pages/Integrations'
 import Skills from './pages/Skills'
 import Utilities from './pages/Utilities'
 import WebScraping from './pages/WebScraping'
-import Integrations from './pages/Integrations'
 import EmailClassifier from './pages/EmailClassifier'
 import LinkedinAI from './pages/LinkedinAI'
 import LeadgenAI from './pages/LeadgenAI'
@@ -59,6 +65,7 @@ function App() {
                 <Route path="/what-is-lindy" element={<WhatIsLindy />} />
                 <Route path="/quickstart" element={<Quickstart />} />
                 <Route path="/workflow-overview" element={<WorkflowOverview />} />
+                <Route path="/ai-crew" element={<AiCrew />} />
                 <Route path="/ai-workflow-generator" element={<AiWorkflowGenerator />} />
                 <Route path="/credentials-management" element={<CredentialsManagement />} />
                 <Route path="/executions-dashboard" element={<ExecutionsDashboard />} />
@@ -68,7 +75,9 @@ function App() {
                 <Route path="/chatbot-overview" element={<ChatbotOverview />} />
                 <Route path="/production-ready-chatbot" element={<ProductionReadyChatbot />} />
                 <Route path="/ai-avatar-voice" element={<AiAvatarVoice />} />
+                <Route path="/cognitive-agents" element={<CognitiveAgentsOverview />} />
                 <Route path="/voice-agents-overview" element={<VoiceAgentsOverview />} />
+                <Route path="/slm" element={<SlmOverview />} />
                 <Route path="/how-to-create-voice-agent" element={<HowToCreateVoiceAgent />} />
                 <Route path="/schedule-calls" element={<ScheduleCalls />} />
                 <Route path="/voice-agents-use-cases" element={<VoiceAgentsUseCases />} />
@@ -82,12 +91,14 @@ function App() {
                 <Route path="/smart-scheduling" element={<SmartScheduling />} />
                 <Route path="/domain-agents" element={<DomainAgents />} />
                 <Route path="/testing" element={<Testing />} />
-                <Route path="/assistants-billing" element={<AssistantsBilling />} />
-                <Route path="/use-cases" element={<UseCases />} />
+                <Route path="/security" element={<Security />} />
+                <Route path="/account-billing" element={<AccountBilling />} />
+                <Route path="/developer-platform" element={<DeveloperOverview />} />
+                <Route path="/developer-apis" element={<DeveloperApis />} />
+                <Route path="/integrations" element={<Integrations />} />
                 <Route path="/skills" element={<Skills />} />
                 <Route path="/utilities" element={<Utilities />} />
                 <Route path="/web-scraping" element={<WebScraping />} />
-                <Route path="/integrations" element={<Integrations />} />
                 <Route path="/email-classifier" element={<EmailClassifier />} />
                 <Route path="/linkedin-ai" element={<LinkedinAI />} />
                 <Route path="/leadgen-ai" element={<LeadgenAI />} />

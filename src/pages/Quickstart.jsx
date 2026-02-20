@@ -1,3 +1,5 @@
+import quickstartHero from '../assets/quickstart-hero.png';
+
 function Quickstart() {
     const orangeColor = '#f59e0b';
 
@@ -13,6 +15,19 @@ function Quickstart() {
             <p style={{ fontSize: '1.2rem', marginBottom: '2rem', color: 'var(--text-secondary)' }}>
                 Get Started in 6 Minutes
             </p>
+
+            <img
+                src={quickstartHero}
+                alt="Spinabot Quickstart Overview"
+                style={{
+                    width: '100%',
+                    maxWidth: '800px',
+                    borderRadius: '12px',
+                    border: '1px solid var(--border-color)',
+                    marginBottom: '3rem',
+                    boxShadow: '0 4px 20px rgba(0,0,0,0.3)'
+                }}
+            />
 
             <section style={{ marginTop: '3rem' }}>
                 <div style={stepStyle}>

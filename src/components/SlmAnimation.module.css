@@ -1,0 +1,237 @@
+.container {
+    width: 100%;
+    margin: 2rem 0;
+    font-family: 'Inter', sans-serif;
+}
+
+.infrastructureBoundary {
+    background: rgba(245, 158, 11, 0.03);
+    border: 2px dashed rgba(245, 158, 11, 0.2);
+    border-radius: 24px;
+    padding: 3rem;
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.boundaryLabel {
+    position: absolute;
+    top: 1rem;
+    left: 1.5rem;
+    font-size: 0.75rem;
+    color: #f59e0b;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+}
+
+.boundaryShield {
+    position: absolute;
+    top: 1rem;
+    right: 1.5rem;
+    font-size: 1.25rem;
+    opacity: 0.6;
+}
+
+.animationArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin: 3rem 0;
+    position: relative;
+}
+
+.node {
+    flex: 0 0 160px;
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 16px;
+    padding: 1.5rem;
+    text-align: center;
+    transition: all 0.3s ease;
+    z-index: 2;
+}
+
+.node.active {
+    border-color: #f59e0b;
+    box-shadow: 0 0 20px rgba(245, 158, 11, 0.15);
+}
+
+.icon,
+.chipIcon {
+    font-size: 2.5rem;
+    margin-bottom: 0.75rem;
+}
+
+.chipIcon {
+    color: #f59e0b;
+}
+
+.node.active .chipIcon {
+    animation: rotate 3s linear infinite;
+}
+
+.label {
+    color: #eee;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+
+.connector {
+    flex-grow: 1;
+    height: 2px;
+    background: #222;
+    margin: 0 1rem;
+    position: relative;
+}
+
+.packet {
+    position: absolute;
+    top: -4px;
+    width: 10px;
+    height: 10px;
+    background: #f59e0b;
+    border-radius: 50%;
+    opacity: 0;
+    box-shadow: 0 0 10px #f59e0b;
+}
+
+.packet.sending {
+    animation: send 2.5s ease-in-out forwards;
+}
+
+.packet.returning {
+    animation: return 2.5s ease-in-out forwards;
+}
+
+.progressTracker {
+    margin-top: 1rem;
+    background: #222;
+    height: 6px;
+    border-radius: 3px;
+    overflow: hidden;
+    position: relative;
+}
+
+.progressBar {
+    height: 100%;
+    background: #f59e0b;
+    transition: width 0.05s linear;
+}
+
+.tokens {
+    position: absolute;
+    top: 10px;
+    left: 0;
+    right: 0;
+    font-size: 0.65rem;
+    color: #f59e0b;
+    opacity: 0.8;
+}
+
+.statusDisplay {
+    background: #111;
+    border: 1px solid #222;
+    border-radius: 12px;
+    padding: 0.75rem 1.5rem;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+.indicator {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: #888;
+    font-size: 0.85rem;
+}
+
+.dot {
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: #888;
+}
+
+.dot.blinking {
+    background: #f59e0b;
+    animation: blink 1s ease-in-out infinite;
+}
+
+.cloudBoundary {
+    margin-top: 3rem;
+    padding: 1.5rem;
+    border-top: 1px solid #222;
+    text-align: center;
+    position: relative;
+    opacity: 0.4;
+}
+
+.cloudIcon {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.cloudLabel {
+    font-size: 0.7rem;
+    font-weight: 700;
+    color: #ff4d4d;
+    letter-spacing: 0.1em;
+}
+
+.blockLine {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: #ff4d4d;
+    border-radius: 2px;
+}
+
+@keyframes send {
+    0% {
+        left: 0;
+        opacity: 1;
+    }
+
+    100% {
+        left: 100%;
+        opacity: 0;
+    }
+}
+
+@keyframes return {
+    0% {
+        left: 100%;
+        opacity: 1;
+    }
+
+    100% {
+        left: 0;
+        opacity: 0;
+    }
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.3;
+    }
+}

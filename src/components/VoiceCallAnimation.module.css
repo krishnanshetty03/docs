@@ -1,0 +1,171 @@
+.phoneFrame {
+    width: 340px;
+    height: 600px;
+    background-color: #0b0b0e;
+    border-radius: 40px;
+    border: 8px solid #1a1a1e;
+    overflow: hidden;
+    position: relative;
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    color: white;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    padding: 3rem 1.5rem 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.statusInfo {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 1.5rem;
+}
+
+.statusText {
+    font-size: 0.75rem;
+    color: #888;
+    letter-spacing: 0.05em;
+    font-weight: 600;
+}
+
+.agentName {
+    font-size: 1.5rem;
+    font-weight: 700;
+    margin-top: 0.25rem;
+}
+
+.agentIcon {
+    width: 44px;
+    height: 44px;
+    background-color: #311b92;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b388ff;
+}
+
+/* Center Content */
+.mainContent {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+.micCircle {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    background-color: #1a1a1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #333;
+    margin-bottom: 3rem;
+}
+
+.waveform {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 4px;
+    height: 60px;
+    width: 100%;
+}
+
+.waveBar {
+    width: 3px;
+    background-color: #a855f7;
+    /* Purple */
+    border-radius: 2px;
+    animation: wavePulse 1s ease-in-out infinite;
+}
+
+@keyframes wavePulse {
+
+    0%,
+    100% {
+        height: 10px;
+        opacity: 0.5;
+    }
+
+    50% {
+        height: 30px;
+        opacity: 1;
+    }
+}
+
+.listening {
+    margin-top: 1rem;
+    color: #888;
+    font-size: 0.95rem;
+    font-weight: 500;
+}
+
+/* Bottom Controls */
+.controls {
+    position: absolute;
+    bottom: 120px;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.controlItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.controlBtn {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: #1a1a1e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.25rem;
+}
+
+.controlLabel {
+    font-size: 0.7rem;
+    color: #888;
+}
+
+/* End Call */
+.endCallArea {
+    position: absolute;
+    bottom: 30px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+
+.endCallBtn {
+    width: 260px;
+    height: 64px;
+    background-color: #3b1111;
+    border-radius: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.75rem;
+    color: #ff4d4d;
+    font-weight: 700;
+    font-size: 1.1rem;
+    cursor: pointer;
+}

@@ -1,5 +1,22 @@
+import AvatarPreview from '../components/AvatarPreview';
+import VoiceMessageAnimation from '../components/VoiceMessageAnimation';
+
 function AiAvatarVoice() {
     const orangeColor = '#f59e0b';
+
+    const previewWrapperStyle = {
+        display: 'flex',
+        justifyContent: 'center',
+        width: '100%',
+        margin: '4rem 0'
+    };
+
+    const animationWrapperStyle = {
+        display: 'flex',
+        justifyContent: 'center',
+        margin: '3rem 0',
+        width: '100%'
+    };
 
     const sectionStyle = {
         marginBottom: '3rem'
@@ -33,9 +50,13 @@ function AiAvatarVoice() {
     return (
         <div>
             <h1>AI Avatar & Voice Capabilities</h1>
-            <p style={{ fontSize: '1.2rem', marginBottom: '3rem', lineHeight: '1.6', color: 'var(--text-secondary)' }}>
+            <p style={{ fontSize: '1.2rem', lineHeight: '1.6', color: 'var(--text-secondary)' }}>
                 Spinabot's AI Avatar transforms traditional chatbots into fully interactive, human-like digital agents capable of handling text, voice, and real-time conversations across multiple channels.
             </p>
+
+            <div style={previewWrapperStyle}>
+                <AvatarPreview />
+            </div>
 
             <section style={sectionStyle}>
                 <div style={cardStyle}>
@@ -79,6 +100,10 @@ function AiAvatarVoice() {
                     <p style={{ lineHeight: '1.6', fontStyle: 'italic', color: 'var(--text-secondary)', marginTop: '1.5rem' }}>
                         The system uses advanced speech-to-text and text-to-speech models for natural and responsive communication.
                     </p>
+                </div>
+
+                <div style={animationWrapperStyle}>
+                    <VoiceMessageAnimation />
                 </div>
 
                 <div style={cardStyle}>

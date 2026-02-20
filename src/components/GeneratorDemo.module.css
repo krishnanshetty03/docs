@@ -1,0 +1,184 @@
+.demoContainer {
+    background-color: #000;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 2rem;
+    max-width: 800px;
+    /* Match workflow animation width */
+    margin: 0 auto;
+    color: #fff;
+    font-family: 'Inter', sans-serif;
+    min-height: 500px;
+    /* Ensure consistent height */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.sparkleIcon {
+    width: 48px;
+    height: 48px;
+    background: linear-gradient(135deg, #333, #111);
+    border: 1px solid #444;
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1.5rem auto;
+    color: #fff;
+}
+
+.mainTitle {
+    font-size: 1.1rem;
+    color: #ccc;
+    margin-bottom: 1.5rem;
+    line-height: 1.5;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.badgeRow {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-bottom: 1rem;
+    flex-wrap: wrap;
+}
+
+.pill {
+    background-color: #111;
+    border: 1px solid #333;
+    border-radius: 20px;
+    padding: 6px 16px;
+    font-size: 0.85rem;
+    color: #eee;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+.pill.green {
+    color: #22c55e;
+    border-color: rgba(34, 197, 94, 0.3);
+    background-color: rgba(34, 197, 94, 0.05);
+}
+
+.pill.blue {
+    color: #3b82f6;
+    /* Blue for languages */
+    border-color: rgba(59, 130, 246, 0.3);
+}
+
+.inputSimulation {
+    width: 100%;
+    max-width: 600px;
+    background: #111;
+    border: 1px solid #333;
+    border-radius: 12px;
+    padding: 1rem;
+    margin-top: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: #666;
+}
+
+.sendButton {
+    width: 36px;
+    height: 36px;
+    background: #333;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #888;
+}
+
+.examplesGrid {
+    display: grid;
+    gap: 1rem;
+    width: 100%;
+    max-width: 600px;
+    margin-top: 1rem;
+}
+
+.exampleBtn {
+    background: #111;
+    border: 1px solid #333;
+    padding: 1rem;
+    border-radius: 10px;
+    text-align: left;
+    color: #ddd;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    font-size: 0.95rem;
+}
+
+.exampleBtn:hover {
+    border-color: #f59e0b;
+    background: rgba(245, 158, 11, 0.05);
+}
+
+.screen {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.5s ease;
+}
+
+.screen.hidden {
+    display: none;
+    opacity: 0;
+}
+
+.loadingText {
+    color: #f59e0b;
+    font-family: monospace;
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    animation: blink 1.5s infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.resetBtn {
+    margin-top: 2rem;
+    background: transparent;
+    border: 1px solid #444;
+    color: #888;
+    padding: 6px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 0.8rem;
+    transition: all 0.2s;
+}
+
+.resetBtn:hover {
+    color: #fff;
+    border-color: #666;
+}

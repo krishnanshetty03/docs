@@ -47,164 +47,59 @@ function Sidebar() {
                 </div>
 
                 <div className={styles.navSection}>
-                    <div className={styles.sectionTitle}>Workflows</div>
+                    <div className={styles.sectionTitle}>Products</div>
                     <ul className={styles.navList}>
+                        <li className={styles.navItem}>
+                            <Link
+                                to="/ai-crew"
+                                className={`${styles.navLink} ${isActive('/ai-crew') ? styles.active : ''}`}
+                            >
+                                AI Crew
+                            </Link>
+                        </li>
                         <li className={styles.navItem}>
                             <Link
                                 to="/workflow-overview"
                                 className={`${styles.navLink} ${isActive('/workflow-overview') ? styles.active : ''}`}
                             >
-                                Overview
+                                Workflows
                             </Link>
                         </li>
-                        <li className={styles.navItem}>
-                            <Link
-                                to="/ai-workflow-generator"
-                                className={`${styles.navLink} ${isActive('/ai-workflow-generator') ? styles.active : ''}`}
-                            >
-                                AI Workflow Generator
-                            </Link>
-                        </li>
-                        <li className={styles.navItem}>
-                            <Link
-                                to="/credentials-management"
-                                className={`${styles.navLink} ${isActive('/credentials-management') ? styles.active : ''}`}
-                            >
-                                Credentials Management
-                            </Link>
-                        </li>
-                        <li className={styles.navItem}>
-                            <Link
-                                to="/executions-dashboard"
-                                className={`${styles.navLink} ${isActive('/executions-dashboard') ? styles.active : ''}`}
-                            >
-                                Executions Dashboard
-                            </Link>
-                        </li>
-                        <li className={styles.navItem}>
-                            <Link
-                                to="/modes-available"
-                                className={`${styles.navLink} ${isActive('/modes-available') ? styles.active : ''}`}
-                            >
-                                Modes Available
-                            </Link>
-                        </li>
-                        <li className={styles.navItem}>
-                            <Link
-                                to="/community"
-                                className={`${styles.navLink} ${isActive('/community') ? styles.active : ''}`}
-                            >
-                                Community
-                            </Link>
-                        </li>
-                        <li className={styles.navItem}>
-                            <Link
-                                to="/use-cases"
-                                className={`${styles.navLink} ${isActive('/use-cases') ? styles.active : ''}`}
-                            >
-                                Use Cases
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className={styles.navSection}>
-                    <div className={styles.sectionTitle}>Chatbot</div>
-                    <ul className={styles.navList}>
                         <li className={styles.navItem}>
                             <Link
                                 to="/chatbot-overview"
                                 className={`${styles.navLink} ${isActive('/chatbot-overview') ? styles.active : ''}`}
                             >
-                                Overview
+                                Chatbot Builder
                             </Link>
                         </li>
-                        <li className={styles.navItem}>
-                            <Link
-                                to="/production-ready-chatbot"
-                                className={`${styles.navLink} ${isActive('/production-ready-chatbot') ? styles.active : ''}`}
-                            >
-                                Production-Ready Chatbot in 4 Steps
-                            </Link>
-                        </li>
-                        <li className={styles.navItem}>
-                            <Link
-                                to="/ai-avatar-voice"
-                                className={`${styles.navLink} ${isActive('/ai-avatar-voice') ? styles.active : ''}`}
-                            >
-                                AI Avatar and Voice Capabilities
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
-
-                <div className={styles.navSection}>
-                    <div className={styles.sectionTitle}>Voice Agents</div>
-                    <ul className={styles.navList}>
                         <li className={styles.navItem}>
                             <Link
                                 to="/voice-agents-overview"
                                 className={`${styles.navLink} ${isActive('/voice-agents-overview') ? styles.active : ''}`}
                             >
-                                Overview
+                                Voice Agents
                             </Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link
-                                to="/how-to-create-voice-agent"
-                                className={`${styles.navLink} ${isActive('/how-to-create-voice-agent') ? styles.active : ''}`}
+                                to="/cognitive-agents"
+                                className={`${styles.navLink} ${isActive('/cognitive-agents') ? styles.active : ''}`}
                             >
-                                How to Create
+                                Cognitive Agents
                             </Link>
                         </li>
                         <li className={styles.navItem}>
                             <Link
-                                to="/schedule-calls"
-                                className={`${styles.navLink} ${isActive('/schedule-calls') ? styles.active : ''}`}
+                                to="/slm"
+                                className={`${styles.navLink} ${isActive('/slm') ? styles.active : ''}`}
                             >
-                                Schedule Calls
-                            </Link>
-                        </li>
-                        <li className={styles.navItem}>
-                            <Link
-                                to="/voice-agents-use-cases"
-                                className={`${styles.navLink} ${isActive('/voice-agents-use-cases') ? styles.active : ''}`}
-                            >
-                                Use Cases
+                                SLM
                             </Link>
                         </li>
                     </ul>
                 </div>
 
-                <div className={styles.navSection}>
-                    <div className={styles.sectionTitle}>Cognitive Agents</div>
-                    <ul className={styles.navList}>
-                        <li className={styles.navItem}>
-                            <Link
-                                to="/email-classifier"
-                                className={`${styles.navLink} ${isActive('/email-classifier') ? styles.active : ''}`}
-                            >
-                                EmailClassifier
-                            </Link>
-                        </li>
-                        <li className={styles.navItem}>
-                            <Link
-                                to="/linkedin-ai"
-                                className={`${styles.navLink} ${isActive('/linkedin-ai') ? styles.active : ''}`}
-                            >
-                                LinkedinAI
-                            </Link>
-                        </li>
-                        <li className={styles.navItem}>
-                            <Link
-                                to="/leadgen-ai"
-                                className={`${styles.navLink} ${isActive('/leadgen-ai') ? styles.active : ''}`}
-                            >
-                                LeadgenAI
-                            </Link>
-                        </li>
-                    </ul>
-                </div>
 
                 <div className={styles.navSection}>
                     <div className={styles.sectionTitle}>Industry Specific Solutions</div>
@@ -335,6 +230,66 @@ function Sidebar() {
                                 className={`${styles.navLink} ${isActive('/media-entertainment') ? styles.active : ''}`}
                             >
                                 Media & Entertainment
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className={styles.navSection}>
+                    <div className={styles.sectionTitle}>Account & Billing</div>
+                    <ul className={styles.navList}>
+                        <li className={styles.navItem}>
+                            <Link
+                                to="/account-billing"
+                                className={`${styles.navLink} ${isActive('/account-billing') ? styles.active : ''}`}
+                            >
+                                Account & Billing
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className={styles.navSection}>
+                    <div className={styles.sectionTitle}>Developer</div>
+                    <ul className={styles.navList}>
+                        <li className={styles.navItem}>
+                            <Link
+                                to="/developer-platform"
+                                className={`${styles.navLink} ${isActive('/developer-platform') ? styles.active : ''}`}
+                            >
+                                Developer Platform
+                            </Link>
+                        </li>
+                        <li className={styles.navItem}>
+                            <Link
+                                to="/developer-apis"
+                                className={`${styles.navLink} ${isActive('/developer-apis') ? styles.active : ''}`}
+                            >
+                                API Documentation
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className={styles.navSection}>
+                    <div className={styles.sectionTitle}>Integrations</div>
+                    <ul className={styles.navList}>
+                        <li className={styles.navItem}>
+                            <Link
+                                to="/integrations"
+                                className={`${styles.navLink} ${isActive('/integrations') ? styles.active : ''}`}
+                            >
+                                Browse Integrations
+                            </Link>
+                        </li>
+                    </ul>
+                </div>
+                <div className={styles.navSection}>
+                    <div className={styles.sectionTitle}>Security</div>
+                    <ul className={styles.navList}>
+                        <li className={styles.navItem}>
+                            <Link
+                                to="/security"
+                                className={`${styles.navLink} ${isActive('/security') ? styles.active : ''}`}
+                            >
+                                Security Overview
                             </Link>
                         </li>
                     </ul>

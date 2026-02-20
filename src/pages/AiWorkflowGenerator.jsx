@@ -1,3 +1,5 @@
+import GeneratorDemo from '../components/GeneratorDemo';
+
 function AiWorkflowGenerator() {
     const orangeColor = '#f59e0b';
 
@@ -28,6 +30,10 @@ function AiWorkflowGenerator() {
             <p style={{ fontSize: '1.2rem', marginBottom: '2rem', lineHeight: '1.6', color: 'var(--text-secondary)' }}>
                 An AI-powered workflow builder that turns your description into working automation—instantly.
             </p>
+
+            <section style={sectionStyle}>
+                <GeneratorDemo />
+            </section>
 
             <section style={sectionStyle}>
                 <h2 style={{ color: orangeColor }}>How It Works</h2>

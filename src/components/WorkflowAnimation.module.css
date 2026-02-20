@@ -1,0 +1,286 @@
+.container {
+    background-color: #09090b;
+    /* Deep black/grey from dashboard */
+    border-radius: 12px;
+    padding: 1.5rem;
+    /* Reduced padding to fit wider content */
+    width: 100%;
+    overflow-x: auto;
+    /* Allow scrolling if it gets too wide */
+    border: 1px solid #27272a;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    /* Align left to suggest flow */
+    gap: 0;
+}
+
+/* Hide scrollbar for cleaner look */
+.container::-webkit-scrollbar {
+    height: 6px;
+}
+
+.container::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 3px;
+}
+
+.flowContainer {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    min-width: max-content;
+    /* Ensure connection lines don't break */
+}
+
+/* Base Node Style */
+.node {
+    background-color: #18181b;
+    border: 1px solid #3f3f46;
+    border-radius: 8px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    min-width: 180px;
+    max-width: 220px;
+    position: relative;
+    transition: all 0.3s ease;
+    opacity: 0.5;
+    /* Dim by default */
+}
+
+.node.active {
+    opacity: 1;
+    border-color: #f59e0b;
+    /* Orange glow on active */
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.15);
+}
+
+/* Trigger Node Specifics */
+.node.trigger {
+    background-color: transparent !important;
+    border: none !important;
+    box-shadow: none !important;
+    padding: 0;
+    min-width: 120px;
+    /* narrowed for trigger */
+    align-items: center;
+    justify-content: center;
+    overflow: visible;
+}
+
+.triggerIconBox {
+    background-color: #27272a;
+    border: 1px solid #3f3f46;
+    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    transition: all 0.3s ease;
+    position: relative;
+    z-index: 2;
+}
+
+.node.trigger.active .triggerIconBox {
+    border-color: #f59e0b;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+}
+
+.triggerText {
+    color: #a1a1aa;
+    font-size: 0.8rem;
+    text-align: center;
+    max-width: 120px;
+    line-height: 1.3;
+}
+
+/* Agent Node Specifics */
+.node.agent {
+    border-radius: 12px;
+}
+
+.headerRow {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.iconWrapper {
+    width: 28px;
+    height: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.75rem;
+    color: #fff;
+}
+
+.title {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #fff;
+    white-space: nowrap;
+}
+
+.tag {
+    background-color: #27272a;
+    color: #a1a1aa;
+    font-size: 0.7rem;
+    padding: 2px 6px;
+    border-radius: 4px;
+    font-family: monospace;
+    margin-bottom: 0.5rem;
+    align-self: flex-start;
+    display: inline-block;
+}
+
+.description {
+    font-size: 0.75rem;
+    color: #a1a1aa;
+    line-height: 1.4;
+}
+
+/* Connectors */
+.connectorLine {
+    height: 2px;
+    width: 40px;
+    background-color: #3f3f46;
+    margin: 0 0.5rem;
+    position: relative;
+}
+
+.connectorProgress {
+    height: 100%;
+    width: 0%;
+    background-color: #f59e0b;
+    transition: width 0.3s linear;
+}
+
+.livePreview {
+    position: absolute;
+    bottom: 1rem;
+    right: 1.5rem;
+    font-family: monospace;
+    color: #555;
+    font-size: 0.8rem;
+    pointer-events: none;
+}
+
+/* Simple Node (Vertical Icon + Text) for Generator properties */
+.node.simple {
+    /* Inherit .node card styles (background, border) */
+    padding: 1rem;
+    width: 180px;
+    /* Fixed width for consistency */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+.simpleIconBox {
+    background-color: #27272a;
+    border: 1px solid #3f3f46;
+    border-radius: 12px;
+    width: 48px;
+    height: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 0.75rem;
+    position: relative;
+    z-index: 2;
+    transition: all 0.3s ease;
+}
+
+.node.simple.active .simpleIconBox {
+    border-color: #f59e0b;
+    box-shadow: 0 0 15px rgba(245, 158, 11, 0.2);
+    transform: scale(1.05);
+}
+
+.simpleTitle {
+    color: #eee;
+    font-size: 0.85rem;
+    font-weight: 500;
+    margin-bottom: 0.25rem;
+    text-align: center;
+}
+
+.simpleSubtitle {
+    color: #71717a;
+    font-size: 0.75rem;
+    max-width: 150px;
+    line-height: 1.3;
+}
+
+/* Branched Layout for Lead Scoring */
+.branchedContainer {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    transform: scale(0.55);
+    /* Scale down significantly to fit */
+    transform-origin: center center;
+}
+
+.branchRow {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.splitSection {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    position: relative;
+}
+
+/* SVG Connector for split */
+.splitConnector {
+    position: absolute;
+    left: -20px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 100%;
+    pointer-events: none;
+}
+
+.branchPath {
+    fill: none;
+    stroke: #3f3f46;
+    stroke-width: 2;
+}
+
+.branchPath.active {
+    stroke: #f59e0b;
+    stroke-dasharray: 100;
+    animation: dash 1s linear infinite;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: -200;
+    }
+}
+
+/* Wait Node */
+.node.wait {
+    min-width: 100px;
+}
+
+.node.wait .simpleIconBox {
+    background-color: transparent;
+    border: 1px solid #3f3f46;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
