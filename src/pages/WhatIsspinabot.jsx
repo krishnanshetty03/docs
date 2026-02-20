@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import SpinabotLogo from '../components/SpinabotLogo'
 
 function WhatIsLindy() {
@@ -14,7 +15,9 @@ function WhatIsLindy() {
         display: 'flex',
         flexDirection: 'column',
         alignItems: 'center',
-        textAlign: 'center'
+        textAlign: 'center',
+        textDecoration: 'none',
+        color: 'inherit'
     };
 
     const productBoxHoverStyle = {
@@ -69,7 +72,8 @@ function WhatIsLindy() {
                     marginLeft: 'auto',
                     marginRight: 'auto'
                 }}>
-                    <div
+                    <Link
+                        to="/chatbot-overview"
                         style={productBoxStyle}
                         onMouseEnter={(e) => {
                             Object.assign(e.currentTarget.style, productBoxHoverStyle);
@@ -93,9 +97,10 @@ function WhatIsLindy() {
                             <li>Answer questions, resolve issues, and escalate when needed</li>
                             <li>Your support team is always available</li>
                         </ul>
-                    </div>
+                    </Link>
 
-                    <div
+                    <Link
+                        to="/voice-agents-overview"
                         style={productBoxStyle}
                         onMouseEnter={(e) => {
                             Object.assign(e.currentTarget.style, productBoxHoverStyle);
@@ -122,9 +127,10 @@ function WhatIsLindy() {
                             <li>Inbound call handling and outbound campaigns</li>
                             <li>Natural conversations that convert</li>
                         </ul>
-                    </div>
+                    </Link>
 
-                    <div
+                    <Link
+                        to="/slm"
                         style={productBoxStyle}
                         onMouseEnter={(e) => {
                             Object.assign(e.currentTarget.style, productBoxHoverStyle);
@@ -157,9 +163,10 @@ function WhatIsLindy() {
                             <li>Cost-effective automation at scale</li>
                             <li>Purpose-built for business operations</li>
                         </ul>
-                    </div>
+                    </Link>
 
-                    <div
+                    <Link
+                        to="/workflow-overview"
                         style={productBoxStyle}
                         onMouseEnter={(e) => {
                             Object.assign(e.currentTarget.style, productBoxHoverStyle);
@@ -189,7 +196,65 @@ function WhatIsLindy() {
                             <li> Describe your problem—our AI instantly delivers the right solution (AI Workflow Generation)</li>
                             <li>Operations run themselves while you focus on growth</li>
                         </ul>
-                    </div>
+                    </Link>
+
+                    <Link
+                        to="/ai-crew"
+                        style={productBoxStyle}
+                        onMouseEnter={(e) => {
+                            Object.assign(e.currentTarget.style, productBoxHoverStyle);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.transform = 'translateY(0)';
+                            e.currentTarget.style.borderColor = 'var(--border-color)';
+                            e.currentTarget.style.boxShadow = 'none';
+                        }}
+                    >
+                        <div style={iconContainerStyle}>
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke={orangeColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
+                                <circle cx="9" cy="7" r="4" />
+                                <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
+                                <path d="M16 3.13a4 4 0 0 1 0 7.75" />
+                            </svg>
+                        </div>
+                        <h3 style={{ color: orangeColor, marginTop: 0, marginBottom: '1rem', textTransform: 'uppercase', fontSize: '0.9rem', letterSpacing: '0.05em' }}>
+                            AI CREW
+                        </h3>
+                        <ul style={{ margin: 0, paddingLeft: '1.25rem', textAlign: 'left' }}>
+                            <li>Orchestrate multi-agent workflows for complex tasks</li>
+                            <li>Synchronize between specialized digital workers</li>
+                            <li>Strategic project oversight and execution</li>
+                        </ul>
+                    </Link>
+
+                    <Link
+                        to="/cognitive-agents"
+                        style={productBoxStyle}
+                        onMouseEnter={(e) => {
+                            Object.assign(e.currentTarget.style, productBoxHoverStyle);
+                        }}
+                        onMouseLeave={(e) => {
+                            e.currentTarget.style.transform = 'translateY(0)';
+                            e.currentTarget.style.borderColor = 'var(--border-color)';
+                            e.currentTarget.style.boxShadow = 'none';
+                        }}
+                    >
+                        <div style={iconContainerStyle}>
+                            <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke={orangeColor} strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+                                <path d="M9.5 2A2.5 2.5 0 0 1 12 4.5v15a2.5 2.5 0 0 1-4.96.44 2.5 2.5 0 0 1-2.79-2.74 2.5 2.5 0 0 1-2-4.7 2.5 2.5 0 0 1 2.31-4.66 2.5 2.5 0 0 1 4.94-2.84z" />
+                                <path d="M14.5 2A2.5 2.5 0 0 0 12 4.5v15a2.5 2.5 0 0 0 4.96.44 2.5 2.5 0 0 0 2.79-2.74 2.5 2.5 0 0 0 2-4.7 2.5 2.5 0 0 0-2.31-4.66 2.5 2.5 0 0 0-4.94-2.84z" />
+                            </svg>
+                        </div>
+                        <h3 style={{ color: orangeColor, marginTop: 0, marginBottom: '1rem', textTransform: 'uppercase', fontSize: '0.9rem', letterSpacing: '0.05em' }}>
+                            COGNITIVE AGENTS
+                        </h3>
+                        <ul style={{ margin: 0, paddingLeft: '1.25rem', textAlign: 'left' }}>
+                            <li>EmailClassifier: Intelligent inbox management</li>
+                            <li>LeadgenAI: Autonomous lead discovery</li>
+                            <li>LinkedInAI: Personal branding strategist</li>
+                        </ul>
+                    </Link>
                 </div>
             </section>
 
